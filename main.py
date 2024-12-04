@@ -37,7 +37,6 @@ def main():
     print(f"{word_counter(book_string)} words found in the document\n")
     print_report(count_characters(book_string))
     print(f"\n--- End report ---")
-    print(word_counter(book_string), count_characters(book_string))
 
 
 main()
