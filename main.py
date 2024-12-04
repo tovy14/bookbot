@@ -22,11 +22,21 @@ def count_characters(input_string):
     return character_count
 
 
+def print_report(input_dict):
+
+    for char in input_dict:
+        print(f"The '{char}' character was found {input_dict[char]} times")
+
+
 def main():
     book_path = "books/frankenstein.txt"
     book_string = read_content(book_path)
-    print(word_counter(book_string))
-    print(count_characters(book_string))
+    # print(word_counter(book_string))
+    # print(count_characters(book_string))
+    print(f"-- Begin report of books/frankenstein.txt ---")
+    print(f"{word_counter(book_string)} words found in the document\n")
+    print_report(count_characters(book_string))
+    print(f"\n--- End report ---")
 
 
 main()
